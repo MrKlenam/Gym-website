@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitShop — Train Hard. Live Strong.</title>
+<meta name="description" content="FitShop — Premium fitness gear, gym equipment, apparel and supplements delivered across Ghana.">
+
+<!-- Google Fonts: Anton for bold display headlines, Inter for clean body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ TOAST NOTIFICATION ============ -->
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- ============ NAVIGATION BAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">FIT<span>SHOP</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search products">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Open wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6c-1.9-1.6-4.7-1.4-6.4.4L12 7.4l-2.4-2.4c-1.7-1.8-4.5-2-6.4-.4-2.1 1.8-2.2 5-.3 6.9L12 21l9.1-9.5c1.9-1.9 1.8-5.1-.3-6.9z"/></svg>
+        <span class="badge" id="wishlistCount">0</span>
+      </button>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Search bar (hidden by default, toggled via JS) -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-bar-inner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search for dumbbells, shoes, protein…" autocomplete="off">
+      <button id="searchClose" aria-label="Close search">&times;</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <p class="hero-kicker">FitShop Ghana</p>
+      <h1 class="hero-title">
+        <span class="line" style="--d:0">TRAIN HARD.</span>
+        <span class="line accent" style="--d:1">LIVE STRONG.</span>
+      </h1>
+      <p class="hero-sub">Premium fitness gear designed to help you push your limits and reach your goals.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-primary">Shop Now</a>
+        <a href="#categories" class="btn btn-outline">Explore Collection</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>15k+</strong><span>Happy athletes</span></div>
+        <div><strong>250+</strong><span>Products</span></div>
+        <div><strong>16</strong><span>Regions delivered</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop" alt="Athlete lifting a barbell in a gym" class="hero-img">
+      <div class="hero-tag hero-tag-1">🔥 Best Seller</div>
+      <div class="hero-tag hero-tag-2">Adjustable Dumbbells<br><strong>GH₵850</strong></div>
+    </div>
+  </div>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- ============ SHOP BY CATEGORY ============ -->
+<section class="categories" id="categories">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Shop by Category</p>
+      <h2>Everything you need to level up</h2>
+    </div>
+    <div class="category-grid">
+
+      <article class="category-card" data-filter="equipment">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" alt="Gym equipment including dumbbells and weight plates">
+        <div class="category-card-body">
+          <h3>Gym Equipment</h3>
+          <p>Dumbbells, barbells, resistance bands, benches &amp; more.</p>
+          <button class="btn-link shop-category-btn" data-filter="equipment">Shop Now &rarr;</button>
+        </div>
+      </article>
+
+      <article class="category-card" data-filter="wear">
+        <img src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?q=80&w=800&auto=format&fit=crop" alt="Gym wear including t-shirts and leggings">
+        <div class="category-card-body">
+          <h3>Gym Wear</h3>
+          <p>T-shirts, shorts, leggings and hoodies built to move.</p>
+          <button class="btn-link shop-category-btn" data-filter="wear">Shop Now &rarr;</button>
+        </div>
+      </article>
+
+      <article class="category-card" data-filter="footwear">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800&auto=format&fit=crop" alt="Training and running shoes">
+        <div class="category-card-body">
+          <h3>Footwear</h3>
+          <p>Training shoes and running shoes for every workout.</p>
+          <button class="btn-link shop-category-btn" data-filter="footwear">Shop Now &rarr;</button>
+        </div>
+      </article>
+
+      <article class="category-card" data-filter="accessories">
+        <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=800&auto=format&fit=crop" alt="Gym accessories including gloves and shaker bottles">
+        <div class="category-card-body">
+          <h3>Accessories</h3>
+          <p>Gloves, shaker bottles, wrist wraps and gym bags.</p>
+          <button class="btn-link shop-category-btn" data-filter="accessories">Shop Now &rarr;</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PRODUCTS ============ -->
+<section class="shop" id="shop">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Featured Products</p>
+      <h2>Gear that works as hard as you do</h2>
+    </div>
+
+    <!-- Category filter buttons -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="equipment">Equipment</button>
+      <button class="filter-btn" data-filter="wear">Gym Wear</button>
+      <button class="filter-btn" data-filter="footwear">Footwear</button>
+      <button class="filter-btn" data-filter="supplements">Supplements</button>
+      <button class="filter-btn" data-filter="accessories">Accessories</button>
+    </div>
+
+    <!-- Product grid populated by JavaScript -->
+    <div class="product-grid" id="productGrid"></div>
+    <p class="no-results" id="noResults" hidden>No products found. Try another search.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT / WHY CHOOSE US ============ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>Why athletes across Ghana choose FitShop</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 6.9L22 9l-5.6 4.8L18 22l-6-4-6 4 1.6-8.2L2 9l7.6-.1z"/></svg>
+        </div>
+        <h3>Premium Quality</h3>
+        <p>Carefully selected fitness products built for performance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Affordable Prices</h3>
+        <p>Quality gym products at competitive prices.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h13l4 4V8l-4 4"/><path d="M16 12V6H3v13h10"/><circle cx="7" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Reliable delivery to customers across Ghana.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        </div>
+        <h3>Secure Shopping</h3>
+        <p>A simple and secure shopping experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMOTIONAL BANNER ============ -->
+<section class="promo">
+  <div class="container promo-inner">
+    <h2>LEVEL UP YOUR TRAINING</h2>
+    <p>Get up to 20% OFF selected fitness products.</p>
+    <a href="#shop" class="btn btn-light">Shop The Sale</a>
+  </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <p class="eyebrow">Get In Touch</p>
+      <h2>We'd love to hear from you</h2>
+      <ul class="contact-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2z"/></svg>
+          <span>+233 24 123 4567</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <span>support@ironfit.com</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Accra, Ghana</span>
+        </li>
+      </ul>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="cName">Name</label>
+        <input type="text" id="cName" name="name" placeholder="Your full name">
+        <span class="form-error" id="cNameError"></span>
+      </div>
+      <div class="form-row">
+        <label for="cEmail">Email</label>
+        <input type="email" id="cEmail" name="email" placeholder="you@example.com">
+        <span class="form-error" id="cEmailError"></span>
+      </div>
+      <div class="form-row">
+        <label for="cMessage">Message</label>
+        <textarea id="cMessage" name="message" rows="4" placeholder="How can we help?"></textarea>
+        <span class="form-error" id="cMessageError"></span>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo">FIT<span>SHOP</span></a>
+      <p>Your partner in strength, fitness, and performance.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4c1 2 3 3 5 3"/></svg>
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.5 8.5 0 0 1-4.1-1L3 20l1.1-5.2a8.4 8.4 0 1 1 16.9-3.3z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <a href="#" id="privacyLink">Privacy Policy</a>
+      <a href="#" id="termsLink">Terms &amp; Conditions</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FITSHOP. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="icon-btn" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+
+  <div class="cart-body" id="cartBody">
+    <!-- Cart items injected by JS -->
+  </div>
+
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">GH₵0</span></div>
+    <div class="cart-row"><span>Delivery</span><span id="cartDelivery">GH₵0</span></div>
+    <div class="cart-row cart-total"><span>Total</span><span id="cartTotal">GH₵0</span></div>
+    <div class="cart-actions">
+      <button class="btn btn-outline btn-block" id="continueShoppingBtn">Continue Shopping</button>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+    </div>
+    <button class="btn-link cart-clear" id="clearCartBtn">Clear Cart</button>
+  </div>
+</aside>
+
+<!-- ============ WISHLIST DRAWER ============ -->
+<aside class="cart-drawer" id="wishlistDrawer" aria-label="Wishlist">
+  <div class="cart-header">
+    <h3>Your Wishlist</h3>
+    <button class="icon-btn" id="wishlistClose" aria-label="Close wishlist">&times;</button>
+  </div>
+  <div class="cart-body" id="wishlistBody">
+    <!-- Wishlist items injected by JS -->
+  </div>
+</aside>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal" id="checkoutModal">
+    <button class="icon-btn modal-close" id="checkoutClose" aria-label="Close checkout">&times;</button>
+
+    <div id="checkoutFormWrap">
+      <h3 class="modal-title">Checkout</h3>
+      <p class="modal-sub">Fill in your details to complete your order.</p>
+
+      <form id="checkoutForm" novalidate>
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Kwame Mensah">
+          <span class="form-error" id="fullNameError"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <span class="form-error" id="emailError"></span>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="024 123 4567">
+          <span class="form-error" id="phoneError"></span>
+        </div>
+        <div class="form-row">
+          <label for="address">Delivery Address</label>
+          <input type="text" id="address" placeholder="House No, Street, Area">
+          <span class="form-error" id="addressError"></span>
+        </div>
+        <div class="form-row">
+          <label for="region">Region</label>
+          <select id="region">
+            <option value="">Select region</option>
+            <option>Greater Accra</option>
+            <option>Ashanti</option>
+            <option>Western</option>
+            <option>Eastern</option>
+            <option>Central</option>
+            <option>Volta</option>
+            <option>Northern</option>
+            <option>Bono</option>
+            <option>Ahafo</option>
+            <option>Upper East</option>
+            <option>Upper West</option>
+          </select>
+          <span class="form-error" id="regionError"></span>
+        </div>
+
+        <div class="form-row">
+          <label>Payment Method</label>
+          <div class="payment-options">
+            <label class="payment-option">
+              <input type="radio" name="payment" value="MTN Mobile Money" checked>
+              <span>MTN Mobile Money</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="Telecel Cash">
+              <span>Telecel Cash</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="AT Mobile Money">
+              <span>AT Mobile Money</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="Visa / Mastercard">
+              <span>Visa / Mastercard</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="Cash on Delivery">
+              <span>Cash on Delivery</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-summary" id="checkoutSummary"></div>
+
+        <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+      </form>
+    </div>
+
+    <!-- Order confirmation view -->
+    <div id="orderConfirmation" class="order-confirmation" hidden>
+      <div class="confirm-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+      </div>
+      <h3>ORDER CONFIRMED!</h3>
+      <p>Thank you for shopping with FitShop. Your order has been received.</p>
+      <p class="order-number">Order No: <strong id="orderNumber"></strong></p>
+      <button class="btn btn-primary" id="closeConfirmationBtn">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SIMPLE LEGAL MODAL (Privacy / Terms) ============ -->
+<div class="modal-overlay" id="legalOverlay">
+  <div class="modal modal-small">
+    <button class="icon-btn modal-close" id="legalClose" aria-label="Close">&times;</button>
+    <h3 class="modal-title" id="legalTitle"></h3>
+    <p id="legalBody" class="modal-sub"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
