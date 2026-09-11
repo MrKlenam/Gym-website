@@ -26,7 +26,7 @@ const PRODUCTS = [
     category: "equipment",
     price: 850,
     desc: "Space-saving dumbbell set, adjustable from 2.5kg to 24kg per side.",
-    img: "https://images.unsplash.com/photo-1638536532686-d610adfc8e5c?q=80&w=600&auto=format&fit=crop",
+    img: "./images/dumbell.jpg",
     rating: 4.8,
     badge: "sale"
   },
@@ -36,7 +36,7 @@ const PRODUCTS = [
     category: "equipment",
     price: 250,
     desc: "5-piece latex resistance bands for strength and mobility training.",
-    img: "https://images.unsplash.com/photo-1598289431512-b97b0917affc?q=80&w=600&auto=format&fit=crop",
+    img: "./images/resistance.jpg",
     rating: 4.5,
     badge: "new"
   },
@@ -46,7 +46,7 @@ const PRODUCTS = [
     category: "accessories",
     price: 150,
     desc: "Breathable padded gloves with wrist support for heavy lifts.",
-    img: "https://images.unsplash.com/photo-1584735175315-9d5df23860e6?q=80&w=600&auto=format&fit=crop",
+    img: "./images/grove.jpg",
     rating: 4.3,
     badge: ""
   },
@@ -56,17 +56,17 @@ const PRODUCTS = [
     category: "accessories",
     price: 120,
     desc: "600ml leak-proof shaker with mixing ball for smooth protein shakes.",
-    img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=600&auto=format&fit=crop",
+    img: "./images/bottle.jpg",
     rating: 4.6,
     badge: ""
   },
   {
-    id: "p5",
+    id: "p5", 
     name: "Training Shoes",
     category: "footwear",
     price: 650,
     desc: "Lightweight cross-training shoes with stable flat sole for lifting.",
-    img: "https://images.unsplash.com/photo-1517260911058-3c65cb4c1a2e?q=80&w=600&auto=format&fit=crop",
+    img: "./images/training.jpg",
     rating: 4.7,
     badge: "new"
   },
@@ -76,7 +76,7 @@ const PRODUCTS = [
     category: "wear",
     price: 280,
     desc: "Moisture-wicking performance tee built for high-intensity sessions.",
-    img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?q=80&w=600&auto=format&fit=crop",
+    img: "./images/shirt.jpg",
     rating: 4.4,
     badge: ""
   },
@@ -86,7 +86,7 @@ const PRODUCTS = [
     category: "accessories",
     price: 350,
     desc: "Durable duffel bag with separate shoe compartment, 40L capacity.",
-    img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=600&auto=format&fit=crop",
+    img: "./images/baggie.jpg",
     rating: 4.5,
     badge: ""
   },
@@ -96,7 +96,7 @@ const PRODUCTS = [
     category: "equipment",
     price: 220,
     desc: "Non-slip 6mm cushioned mat for yoga, stretching and floor work.",
-    img: "https://images.unsplash.com/photo-1592432678016-e910b452f9a2?q=80&w=600&auto=format&fit=crop",
+    img: "./images/yoga.jpg",
     rating: 4.6,
     badge: "sale"
   },
@@ -106,7 +106,7 @@ const PRODUCTS = [
     category: "supplements",
     price: 480,
     desc: "25g protein per serving to support muscle recovery and growth.",
-    img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
+    img: "./images/protein.jpg",
     rating: 4.9,
     badge: "sale"
   },
@@ -116,7 +116,7 @@ const PRODUCTS = [
     category: "footwear",
     price: 590,
     desc: "Responsive cushioned running shoes for road and treadmill miles.",
-    img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop",
+    img: "./images/running.jpg",
     rating: 4.5,
     badge: ""
   },
@@ -126,7 +126,7 @@ const PRODUCTS = [
     category: "wear",
     price: 260,
     desc: "Squat-proof high-waist leggings with side pocket for essentials.",
-    img: "https://images.unsplash.com/photo-1506629905607-53a5c2371c8b?q=80&w=600&auto=format&fit=crop",
+    img: "./images/leggings.jpg",
     rating: 4.7,
     badge: "new"
   },
@@ -136,7 +136,7 @@ const PRODUCTS = [
     category: "equipment",
     price: 320,
     desc: "Genuine leather belt for core stability on heavy compound lifts.",
-    img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop",
+    img: "./images/belt.jpg",
     rating: 4.6,
     badge: ""
   }
