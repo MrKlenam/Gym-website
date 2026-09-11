@@ -1,5 +1,5 @@
 /* =========================================================
-   FITSHOP — SCRIPT.JS
+   Volta Muscle — SCRIPT.JS
    Vanilla JavaScript only. No frameworks, no build step.
    Sections:
    1. Product data
@@ -309,7 +309,7 @@ function updateWishlistUI() {
 }
 
 function renderWishlistDrawer() {
-  if (wishlist.length === 0) {
+  if (wishlist.length ===0) {
     wishlistBody.innerHTML = `
       <div class="cart-empty">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6c-1.9-1.6-4.7-1.4-6.4.4L12 7.4l-2.4-2.4c-1.7-1.8-4.5-2-6.4-.4-2.1 1.8-2.2 5-.3 6.9L12 21l9.1-9.5c1.9-1.9 1.8-5.1-.3-6.9z"/></svg>
