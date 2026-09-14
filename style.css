@@ -539,7 +539,7 @@ p{
 
 /*======== VOLTA MUSCLE GALLERY========= */
 
-.gallery{ padding: 84px 0; background: var(--light); }
+.gallery{ padding: 85px 0; background: var(--light); }
 
 .gallery-grid{
   display: grid;
@@ -632,7 +632,7 @@ p{
 @media (max-width: 1024px){
   .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 640px){
+@media (max-width: 440px){
   .gallery-grid{ grid-template-columns: 1fr; }
   .gallery{ padding: 56px 0; }
 }
