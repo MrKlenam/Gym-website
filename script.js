@@ -147,8 +147,8 @@ const DELIVERY_FEE = 30;
 /* ---------------------------------------------------------
    2. STATE + LOCALSTORAGE HELPERS
 --------------------------------------------------------- */
-let cart = loadFromStorage("fitshop_cart", []);
-let wishlist = loadFromStorage("fitshop_wishlist", []);
+let cart = loadFromStorage("VoltaMuscle_cart", []);
+let wishlist = loadFromStorage("VoltaMuscle_wishlist", []);
 let currentFilter = "all";
 let currentSearch = "";
 
@@ -162,11 +162,11 @@ function loadFromStorage(key, fallback) {
 }
 
 function saveCart() {
-  localStorage.setItem("fitshop_cart", JSON.stringify(cart));
+  localStorage.setItem("VoltaMuscle_cart", JSON.stringify(cart));
 }
 
 function saveWishlist() {
-  localStorage.setItem("fitshop_wishlist", JSON.stringify(wishlist));
+  localStorage.setItem("VoltaMuscle_wishlist", JSON.stringify(wishlist));
 }
 
 /* ---------------------------------------------------------
